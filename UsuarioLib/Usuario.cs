@@ -4,7 +4,6 @@ namespace UsuarioLib;
 
 public class Usuario
 {
-
     public Usuario(string nome, string email, List<string> telefone)
     {
         Nome = nome;
@@ -21,8 +20,8 @@ public class Usuario
     {
         Telefones = Telefones.Select(telefone =>
             telefone.Length == 8 ?
-            telefone = "9" + telefone :
-            telefone
+            telefone = "+55 (31) 9" + telefone :
+            "+55 (31) " + telefone
         ).ToList();
     }
 
